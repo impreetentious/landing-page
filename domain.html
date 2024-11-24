@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO ═══════════════════════════════════════════════════════════
+       ✏️  Edit: title, description, canonical, og:url, og:image
+  ════════════════════════════════════════════════════════════════════ -->
+  <title>Sidakpreet Singh — Building Something Better</title>
+  <meta name="description" content="Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sidakpreetsingh.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://sidakpreetsingh.com/" />
+  <meta property="og:title"       content="Sidakpreet Singh — Building Something Better" />
+  <meta property="og:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon." />
+  <meta property="og:image"       content="https://sidakpreetsingh.com/og-image.png" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Sidakpreet Singh — Building Something Better" />
+  <meta name="twitter:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon." />
+  <meta name="twitter:image"       content="https://sidakpreetsingh.com/og-image.png" />
+
+  <!-- Inline SVG favicon — no extra files needed -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%23050505'/><text x='50' y='70' font-size='58' text-anchor='middle' font-family='monospace' font-weight='700' fill='%2300E5FF'>S</text></svg>" />
+
+  <!-- Google Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════════════════════ */
+    :root {
+      --bg:          #050505;
+      --surface:     #0c0c0c;
+      --border:      #1c1c1c;
+      --border-mid:  #2c2c2c;
+      --muted:       #484848;
+      --ash:         #888888;
+      --text:        #dcdcdc;
+      --white:       #ffffff;
+      --cyan:        #00E5FF;
+      --cyan-10:     rgba(0, 229, 255, 0.07);
+      --cyan-20:     rgba(0, 229, 255, 0.18);
+      --cyan-35:     rgba(0, 229, 255, 0.32);
+
+      --sans:  'Inter', system-ui, -apple-system, sans-serif;
+      --mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+      --radius:    6px;
+      --ease:      180ms ease;
+      --ease-out:  220ms ease-out;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BASE RESET
+    ═══════════════════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      color-scheme: dark;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       KEYFRAMES
+    ═══════════════════════════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0%, 48%  { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.28; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ANIMATION UTILITY CLASSES
+    ═══════════════════════════════════════════════════════════════ */
+    .anim {
+      opacity: 0;
+      animation: fadeUp 0.42s ease-out forwards;
+      will-change: opacity, transform;
+    }
+    .d1 { animation-delay: 0.04s; }
+    .d2 { animation-delay: 0.14s; }
+    .d3 { animation-delay: 0.24s; }
+    .d4 { animation-delay: 0.34s; }
+    .d5 { animation-delay: 0.46s; }
+    .d6 { animation-delay: 0.58s; }
+    .d7 { animation-delay: 0.70s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim { opacity: 1; animation: none; }
+      .cursor, .live-dot { animation: none !important; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════════════════════════ */
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    main { flex: 1; }
+
+    /* ═══════════════════════════════════════════════════════════════
+       NAV STRIP
+    ═══════════════════════════════════════════════════════════════ */
+    .site-nav {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+    }
+
+    .nav-prompt {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ash);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-tilde {
+      color: var(--cyan);
+      margin-right: 6px;
+      user-select: none;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: var(--cyan);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1.1s step-end infinite;
+    }
+
+    .nav-badge {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--cyan);
+      border: 1px solid var(--cyan-20);
+      background: var(--cyan-10);
+      border-radius: 3px;
+      padding: 4px 9px;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════════ */
+    .hero {
+      padding: 76px 0 60px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--cyan);
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+      user-select: none;
+    }
+
+    .hero-h1 {
+      font-size: clamp(30px, 7vw, 52px);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin-bottom: 22px;
+    }
+
+    .hero-h1 em {
+      font-style: normal;
+      color: var(--cyan);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--ash);
+      max-width: 430px;
+      line-height: 1.72;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SECTION LABEL
+    ═══════════════════════════════════════════════════════════════ */
+    .slabel {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      margin-bottom: 18px;
+      user-select: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RULE DIVIDERS
+    ═══════════════════════════════════════════════════════════════ */
+    .rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 52px 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       IDENTITY / DOMAIN SECTION
+    ═══════════════════════════════════════════════════════════════ */
+    .identity-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .identity-domain {
+      font-family: var(--mono);
+      font-size: clamp(18px, 3.8vw, 28px);
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.015em;
+    }
+
+    .identity-note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       STATUS PANEL  ← signature element
+    ═══════════════════════════════════════════════════════════════ */
+    .status-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* The single cyan accent line — contained, not broad glow */
+    .status-card::before {
+      content: '';
+      display: block;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--cyan) 30%,
+        var(--cyan) 70%,
+        transparent 100%
+      );
+      opacity: 0.45;
+    }
+
+    .status-body {
+      padding: 20px 22px;
+    }
+
+    .status-head {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      flex-shrink: 0;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    .status-head-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      flex: 1;
+    }
+
+    .status-ver {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .status-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .sr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sr-key {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      min-width: 88px;
+      flex-shrink: 0;
+    }
+
+    /* CSS dot-dashed separator — adapts to any width */
+    .sr-line {
+      flex: 1;
+      height: 1px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--border-mid) 0,
+        var(--border-mid) 3px,
+        transparent 3px,
+        transparent 9px
+      );
+    }
+
+    .sr-val {
+      font-family: var(--mono);
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .sr-val.live    { color: var(--cyan); }
+    .sr-val.active  { color: var(--cyan); }
+    .sr-val.wip     { color: var(--ash); }
+    .sr-val.dim     { color: var(--muted); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       CONTACT CARDS
+    ═══════════════════════════════════════════════════════════════ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .c-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition:
+        border-color var(--ease),
+        background   var(--ease),
+        transform    var(--ease-out);
+    }
+
+    .c-card:hover {
+      border-color: var(--cyan-35);
+      background: var(--cyan-10);
+      transform: translateY(-2px);
+    }
+
+    .c-card:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+      border-color: var(--cyan-35);
+    }
+
+    .c-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: color var(--ease);
+    }
+
+    .c-card:hover .c-icon {
+      color: var(--cyan);
+    }
+
+    .c-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .c-type {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .c-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: color var(--ease);
+    }
+
+    .c-card:hover .c-label {
+      color: var(--white);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       UPCOMING TAGS
+    ═══════════════════════════════════════════════════════════════ */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ash);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 5px 12px;
+      cursor: default;
+      user-select: none;
+      transition:
+        border-color var(--ease),
+        color        var(--ease),
+        background   var(--ease);
+    }
+
+    .tag:hover {
+      border-color: var(--cyan-20);
+      color: var(--text);
+      background: var(--cyan-10);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════════ */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+      padding: 24px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .f-domain {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .f-note {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .f-year {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════ NAV ════════════════════════════════ -->
+  <header class="site-nav" role="banner">
+    <div class="wrap">
+      <nav class="nav-inner" aria-label="Site header">
+
+        <div class="nav-prompt" aria-label="Current domain: sidakpreetsingh.com">
+          <span class="nav-tilde" aria-hidden="true">~</span>
+          <!-- ✏️ EDIT — nav domain -->
+          <span>sidakpreetsingh.com</span>
+          <span class="cursor" aria-hidden="true"></span>
+        </div>
+
+        <span class="nav-badge" aria-label="Status: Live">[ LIVE ]</span>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════ MAIN ═══════════════════════════════ -->
+  <main>
+    <div class="wrap">
+
+      <!-- ── HERO ──────────────────────────────────────────────────────── -->
+      <section class="hero" aria-labelledby="hero-heading">
+
+        <p class="hero-eyebrow anim d1" aria-hidden="true">// portfolio.incoming</p>
+
+        <!-- ✏️ EDIT — main headline -->
+        <h1 id="hero-heading" class="hero-h1 anim d2">
+          Building the things<br>I <em>wish existed.</em>
+        </h1>
+
+        <!-- ✏️ EDIT — one-line subheading -->
+        <p class="hero-sub anim d3">
+          Product professional, builder, and automation enthusiast —
+          currently designing what comes next.
+        </p>
+
+      </section>
+
+
+      <!-- ── IDENTITY / DOMAIN ──────────────────────────────────────────── -->
+      <section class="anim d3" aria-label="Digital identity">
+
+        <p class="slabel">// identity</p>
+
+        <div class="identity-row">
+          <!-- ✏️ EDIT — your domain -->
+          <span class="identity-domain">sidakpreetsingh.com</span>
+          <span class="identity-note">You found it early.</span>
+        </div>
+
+      </section>
+
+
+      <hr class="rule anim d4" aria-hidden="true" />
+
+
+      <!-- ── STATUS PANEL ───────────────────────────────────────────────── -->
+      <section class="anim d4" aria-label="System status">
+
+        <p class="slabel">// system.status</p>
+
+        <div class="status-card" role="status" aria-live="polite">
+          <div class="status-body">
+
+            <div class="status-head">
+              <div class="live-dot" aria-hidden="true"></div>
+              <span class="status-head-label">SYSTEM ONLINE</span>
+              <!-- ✏️ EDIT — bump version when you update the page -->
+              <span class="status-ver">v0.1.0</span>
+            </div>
+
+            <div class="status-rows">
+
+              <div class="sr">
+                <span class="sr-key">portfolio</span>
+                <span class="sr-line" aria-hidden="true"></span>
+                <span class="sr-val wip">in progress</span>
+              </div>
+
+              <div class="sr">
+                <span class="sr-key">domain</span>
+                <span class="sr-line" aria-hidden="true"></span>
+                <span class="sr-val live">live ✓</span>
+              </div>
+
+              <div class="sr">
+                <span class="sr-key">email</span>
+                <span class="sr-line" aria-hidden="true"></span>
+                <span class="sr-val active">active ✓</span>
+              </div>
+
+              <div class="sr">
+                <span class="sr-key">eta</span>
+                <span class="sr-line" aria-hidden="true"></span>
+                <span class="sr-val dim">soon™</span>
+              </div>
+
+              <!-- ✏️ ADD MORE STATUS ROWS HERE — copy a .sr block above -->
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <hr class="rule anim d5" aria-hidden="true" />
+
+
+      <!-- ── CONTACT ────────────────────────────────────────────────────── -->
+      <section class="anim d5" aria-label="Contact">
+
+        <p class="slabel">// reach.me</p>
+
+        <div class="contact-grid">
+
+          <!-- ✏️ EDIT — replace EMAIL_URL with mailto:your@email.com -->
+          <a href="mailto:hello@sidakpreetsingh.com" class="c-card" aria-label="Send an email">
+            <svg class="c-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <rect x="2.5" y="4.5" width="15" height="12" rx="1.5" />
+              <polyline points="2.5,6.5 10,12 17.5,6.5" />
+            </svg>
+            <div class="c-meta">
+              <span class="c-type">email</span>
+              <span class="c-label">Get in touch</span>
+            </div>
+          </a>
+
+          <!-- ✏️ EDIT — replace GITHUB_URL with https://github.com/yourhandle -->
+          <a href="https://github.com/ItsMonarch04" class="c-card"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub profile">
+            <svg class="c-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 .5C4.753.5.5 4.753.5 10c0 4.2 2.724 7.76 6.5 9.018.475.088.65-.207.65-.459
+                       0-.226-.008-.824-.013-1.616-2.643.574-3.2-1.274-3.2-1.274-.432-1.098-1.055-1.39-1.055-1.39
+                       -.863-.59.065-.578.065-.578.954.067 1.457.98 1.457.98.848 1.453 2.227 1.033 2.769.79
+                       .086-.615.332-1.034.604-1.272-2.11-.24-4.33-1.055-4.33-4.696 0-1.037.37-1.885.978-2.549
+                       -.098-.24-.424-1.207.093-2.516 0 0 .797-.255 2.613.974A9.1 9.1 0 0110 4.597
+                       c.808.004 1.621.109 2.38.32 1.814-1.229 2.61-.974 2.61-.974.519 1.31.193 2.276.095 2.516
+                       .61.664.977 1.512.977 2.549 0 3.651-2.223 4.453-4.34 4.688.341.294.645.873.645 1.76
+                       0 1.27-.011 2.295-.011 2.607 0 .254.173.551.654.458A9.503 9.503 0 0019.5 10C19.5 4.753
+                       15.247.5 10 .5z"/>
+            </svg>
+            <div class="c-meta">
+              <span class="c-type">github</span>
+              <span class="c-label">See the work</span>
+            </div>
+          </a>
+
+          <!-- ✏️ EDIT — replace LINKEDIN_URL with https://linkedin.com/in/yourhandle -->
+          <a href="https://linkedin.com/in/sidakpreetsinghk" class="c-card"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn profile">
+            <svg class="c-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601
+                       2.207v4.248H8.015v-8.59h2.558v1.174h.037c.355-.674 1.226-1.387 2.526-1.387
+                       2.703 0 3.203 1.779 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096
+                       1.548 1.548 0 01.003 3.096zm1.337 9.763H3.667v-8.59h2.675v8.59zM17.668
+                       1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34
+                       c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
+            </svg>
+            <div class="c-meta">
+              <span class="c-type">linkedin</span>
+              <span class="c-label">Connect</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+
+      <hr class="rule anim d6" aria-hidden="true" />
+
+
+      <!-- ── UPCOMING ────────────────────────────────────────────────────── -->
+      <section class="anim d7" style="padding-bottom: 80px;" aria-label="Upcoming">
+
+        <p class="slabel">// coming.next</p>
+
+        <div class="tags" role="list">
+          <!-- ✏️ EDIT — add or remove tags freely -->
+          <span class="tag" role="listitem">portfolio</span>
+          <span class="tag" role="listitem">blog</span>
+          <span class="tag" role="listitem">experiments</span>
+          <span class="tag" role="listitem">automation lab</span>
+          <span class="tag" role="listitem">ai projects</span>
+        </div>
+
+      </section>
+
+    </div><!-- /wrap -->
+  </main>
+
+
+  <!-- ════════════════════════════════ FOOTER ═════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-inner">
+        <!-- ✏️ EDIT — footer domain -->
+        <span class="f-domain">sidakpreetsingh.com</span>
+        <span class="f-note">Built with curiosity.</span>
+        <span class="f-year" id="yr"></span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Auto-set year — never needs updating manually
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

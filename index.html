@@ -7,21 +7,21 @@
   <!-- ═══ SEO ═══════════════════════════════════════════════════════════
        ✏️  Edit: title, description, canonical, og:url, og:image
   ════════════════════════════════════════════════════════════════════ -->
-  <title>Sidakpreet Singh — Building Something Better</title>
-  <meta name="description" content="Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com." />
+  <title>Sidakpreet Singh: Building something better.</title>
+  <meta name="description" content="Portfolio launching soon at sidakpreetsingh.com." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sidakpreetsingh.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://sidakpreetsingh.com/" />
-  <meta property="og:title"       content="Sidakpreet Singh — Building Something Better" />
+  <meta property="og:title"       content="Sidakpreet Singh: Building something better." />
   <meta property="og:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon." />
   <meta property="og:image"       content="https://sidakpreetsingh.com/og-image.png" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Sidakpreet Singh — Building Something Better" />
+  <meta name="twitter:title"       content="Sidakpreet Singh: Building something better." />
   <meta name="twitter:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon." />
   <meta name="twitter:image"       content="https://sidakpreetsingh.com/og-image.png" />
 
@@ -50,6 +50,7 @@
       --cyan-10:     rgba(0, 229, 255, 0.07);
       --cyan-20:     rgba(0, 229, 255, 0.18);
       --cyan-35:     rgba(0, 229, 255, 0.32);
+      --amber:       #c88040;
 
       --sans:  'Inter', system-ui, -apple-system, sans-serif;
       --mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
@@ -235,7 +236,7 @@
     .slabel {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--muted);
+      color: var(--ash);
       letter-spacing: 0.12em;
       margin-bottom: 18px;
       user-select: none;
@@ -324,7 +325,7 @@
     .status-head-label {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--muted);
+      color: var(--ash);
       letter-spacing: 0.12em;
       flex: 1;
     }
@@ -350,7 +351,7 @@
     .sr-key {
       font-family: var(--mono);
       font-size: 13px;
-      color: var(--muted);
+      color: #6c6c6c;
       min-width: 88px;
       flex-shrink: 0;
     }
@@ -376,8 +377,8 @@
 
     .sr-val.live    { color: var(--cyan); }
     .sr-val.active  { color: var(--cyan); }
-    .sr-val.wip     { color: var(--ash); }
-    .sr-val.dim     { color: var(--muted); }
+    .sr-val.wip     { color: var(--amber); }
+    .sr-val.dim     { color: var(--ash); }
 
     /* ═══════════════════════════════════════════════════════════════
        CONTACT CARDS
@@ -404,7 +405,6 @@
       border-radius: var(--radius);
       transition:
         border-color var(--ease),
-        background   var(--ease),
         transform    var(--ease-out);
     }
 
@@ -423,7 +423,7 @@
     .c-icon {
       width: 20px;
       height: 20px;
-      color: var(--muted);
+      color: var(--ash);
       flex-shrink: 0;
       transition: color var(--ease);
     }
@@ -441,7 +441,7 @@
     .c-type {
       font-family: var(--mono);
       font-size: 10px;
-      color: var(--muted);
+      color: var(--ash);
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
@@ -469,16 +469,15 @@
     .tag {
       font-family: var(--mono);
       font-size: 12px;
-      color: var(--ash);
-      border: 1px solid var(--border);
+      color: var(--text);
+      border: 1px solid var(--border-mid);
       border-radius: 3px;
       padding: 5px 12px;
       cursor: default;
       user-select: none;
       transition:
         border-color var(--ease),
-        color        var(--ease),
-        background   var(--ease);
+        color        var(--ease);
     }
 
     .tag:hover {
@@ -514,12 +513,6 @@
       font-size: 12px;
       color: var(--muted);
       font-style: italic;
-    }
-
-    .f-year {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
     }
   </style>
 </head>
@@ -561,7 +554,7 @@
 
         <!-- ✏️ EDIT — one-line subheading -->
         <p class="hero-sub anim d3">
-          Product professional, builder, and automation enthusiast —
+          Product professional, builder and automation enthusiast;
           currently designing what comes next.
         </p>
 
@@ -597,7 +590,7 @@
               <div class="live-dot" aria-hidden="true"></div>
               <span class="status-head-label">SYSTEM ONLINE</span>
               <!-- ✏️ EDIT — bump version when you update the page -->
-              <span class="status-ver">v0.1.0</span>
+              <span class="status-ver">v1.1.0</span>
             </div>
 
             <div class="status-rows">
@@ -655,7 +648,7 @@
             </svg>
             <div class="c-meta">
               <span class="c-type">email</span>
-              <span class="c-label">Get in touch</span>
+              <span class="c-label">Let's connect.</span>
             </div>
           </a>
 
@@ -676,7 +669,7 @@
             </svg>
             <div class="c-meta">
               <span class="c-type">github</span>
-              <span class="c-label">See the work</span>
+              <span class="c-label">I tinker here.</span>
             </div>
           </a>
 
@@ -694,7 +687,7 @@
             </svg>
             <div class="c-meta">
               <span class="c-type">linkedin</span>
-              <span class="c-label">Connect</span>
+              <span class="c-label">Know more about me.</span>
             </div>
           </a>
 
@@ -706,7 +699,7 @@
 
 
       <!-- ── UPCOMING ────────────────────────────────────────────────────── -->
-      <section class="anim d7" style="padding-bottom: 80px;" aria-label="Upcoming">
+      <section class="anim d7" aria-label="Upcoming">
 
         <p class="slabel">// coming.next</p>
 
@@ -714,8 +707,7 @@
           <!-- ✏️ EDIT — add or remove tags freely -->
           <span class="tag" role="listitem">portfolio</span>
           <span class="tag" role="listitem">blog</span>
-          <span class="tag" role="listitem">experiments</span>
-          <span class="tag" role="listitem">automation lab</span>
+          <span class="tag" role="listitem">automations</span>
           <span class="tag" role="listitem">ai projects</span>
         </div>
 
@@ -729,10 +721,9 @@
   <footer class="site-footer" role="contentinfo">
     <div class="wrap">
       <div class="footer-inner">
-        <!-- ✏️ EDIT — footer domain -->
-        <span class="f-domain">sidakpreetsingh.com</span>
-        <span class="f-note">Built with curiosity.</span>
-        <span class="f-year" id="yr"></span>
+        <!-- ✏️ EDIT — footer name -->
+        <span class="f-domain">© <span id="yr">2024</span> Sidakpreet Singh</span>
+        <span class="f-note">Built with curiosity and AI.</span>
       </div>
     </div>
   </footer>

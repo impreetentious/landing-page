@@ -1,0 +1,84 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<h2 class="sr-only">OG image preview and download tool for sidakpreetsingh.com</h2>
+
+<div style="padding: 1rem 0;">
+  <canvas id="og" width="1200" height="630" style="width:100%;height:auto;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);display:block;"></canvas>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
+    <span style="font-size:13px;color:var(--color-text-secondary);">1200 × 630 px · PNG</span>
+    <button onclick="downloadPNG()" style="display:flex;align-items:center;gap:6px;font-size:13px;">
+      <i class="ti ti-download" aria-hidden="true"></i> download og-image.png
+    </button>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('og');
+const ctx = canvas.getContext('2d');
+const W = 1200, H = 630, PX = 80;
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  ctx.fillStyle = '#050505';
+  ctx.fillRect(0, 0, W, H);
+
+  const topGrad = ctx.createLinearGradient(0, 0, W, 0);
+  topGrad.addColorStop(0, 'transparent');
+  topGrad.addColorStop(0.25, '#00E5FF');
+  topGrad.addColorStop(0.75, '#00E5FF');
+  topGrad.addColorStop(1, 'transparent');
+  ctx.globalAlpha = 0.45;
+  ctx.fillStyle = topGrad;
+  ctx.fillRect(0, 0, W, 2);
+  ctx.globalAlpha = 1;
+
+  ctx.font = '400 18px "JetBrains Mono", monospace';
+  ctx.fillStyle = '#484848';
+  ctx.fillText('// portfolio.incoming', PX, 112);
+
+  ctx.font = '500 22px "JetBrains Mono", monospace';
+  ctx.fillStyle = '#00E5FF';
+  ctx.fillText('~ sidakpreetsingh.com', PX, 158);
+
+  ctx.strokeStyle = '#1c1c1c';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(PX, 188);
+  ctx.lineTo(W - PX, 188);
+  ctx.stroke();
+
+  ctx.font = '300 70px "Inter", sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('Building the things', PX, 300);
+
+  ctx.font = '300 70px "Inter", sans-serif';
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('I ', PX, 385);
+  const iW = ctx.measureText('I ').width;
+  ctx.fillStyle = '#00E5FF';
+  ctx.fillText('wish existed.', PX + iW, 385);
+
+  ctx.font = '400 24px "Inter", sans-serif';
+  ctx.fillStyle = '#888888';
+  ctx.fillText('Product professional, builder and automation enthusiast.', PX, 474);
+
+  ctx.font = '700 160px "JetBrains Mono", monospace';
+  ctx.fillStyle = 'rgba(0,229,255,0.04)';
+  ctx.textAlign = 'right';
+  ctx.fillText('S', W - 40, H + 10);
+  ctx.textAlign = 'left';
+}
+
+function downloadPNG() {
+  draw();
+  const link = document.createElement('a');
+  link.download = 'og-image.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+document.fonts.ready.then(() => draw());
+setTimeout(() => draw(), 800);
+</script>

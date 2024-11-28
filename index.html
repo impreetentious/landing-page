@@ -4,65 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ═══ SEO ═══════════════════════════════════════════════════════════
-       ✏️  Edit: title, description, canonical, og:url, og:image
-  ════════════════════════════════════════════════════════════════════ -->
-  <title>Sidakpreet Singh: Building something better.</title>
-  <meta name="description" content="Portfolio launching soon at sidakpreetsingh.com." />
+  <title>Sidakpreet Singh • Building something better!</title>
+  <meta name="description" content="Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com." />
+  <meta name="author" content="Sidakpreet Singh" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sidakpreetsingh.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://sidakpreetsingh.com/" />
-  <meta property="og:title"       content="Sidakpreet Singh: Building something better." />
-  <meta property="og:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon." />
+  <meta property="og:title"       content="Sidakpreet Singh • Building something better!" />
+  <meta property="og:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com." />
   <meta property="og:image"       content="https://sidakpreetsingh.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="Sidakpreet Singh • Building something better!" />
+  <meta property="og:site_name"     content="sidakpreetsingh.com" />
+  <meta property="og:locale"       content="en_US" />
 
-  <!-- Twitter / X Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Sidakpreet Singh: Building something better." />
-  <meta name="twitter:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon." />
+  <meta name="twitter:title"       content="Sidakpreet Singh • Building something better!" />
+  <meta name="twitter:description" content="Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com." />
   <meta name="twitter:image"       content="https://sidakpreetsingh.com/og-image.png" />
+  <meta name="twitter:image:alt"   content="Sidakpreet Singh • Building something better!" />
 
-  <!-- Inline SVG favicon — no extra files needed -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%23050505'/><text x='50' y='70' font-size='58' text-anchor='middle' font-family='monospace' font-weight='700' fill='%2300E5FF'>S</text></svg>" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sidakpreetsingh.com/#website",
+        "url": "https://sidakpreetsingh.com/",
+        "name": "Sidakpreet Singh • Building something better!",
+        "description": "Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com.",
+        "publisher": { "@id": "https://sidakpreetsingh.com/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://sidakpreetsingh.com/#webpage",
+        "url": "https://sidakpreetsingh.com/",
+        "name": "Sidakpreet Singh • Building something better!",
+        "description": "Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com.",
+        "isPartOf": { "@id": "https://sidakpreetsingh.com/#website" },
+        "mainEntity": { "@id": "https://sidakpreetsingh.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://sidakpreetsingh.com/#person",
+        "name": "Sidakpreet Singh",
+        "url": "https://sidakpreetsingh.com/",
+        "image": "https://sidakpreetsingh.com/og-image.png",
+        "email": "hello@sidakpreetsingh.com",
+        "description": "Product professional, builder and automation enthusiast. Portfolio launching soon at sidakpreetsingh.com.",
+        "knowsAbout": ["portfolio", "blog", "automations", "projects"],
+        "sameAs": [
+          "https://github.com/ItsMonarch04",
+          "https://linkedin.com/in/sidakpreetsinghk"
+        ]
+      }
+    ]
+  }
+  </script>
 
-  <!-- Google Fonts: Inter + JetBrains Mono -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        DESIGN TOKENS
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     :root {
-      --bg:          #050505;
-      --surface:     #0c0c0c;
-      --border:      #1c1c1c;
-      --border-mid:  #2c2c2c;
-      --muted:       #484848;
-      --ash:         #888888;
-      --text:        #dcdcdc;
-      --white:       #ffffff;
-      --cyan:        #00E5FF;
-      --cyan-10:     rgba(0, 229, 255, 0.07);
-      --cyan-20:     rgba(0, 229, 255, 0.18);
-      --cyan-35:     rgba(0, 229, 255, 0.32);
-      --amber:       #c88040;
+      --bg:         #050505;
+      --surface:    #0c0c0c;
+      --border:     #1c1c1c;
+      --border-mid: #2c2c2c;
+      --muted:      #484848;
+      --ash:        #888888;
+      --text:       #dcdcdc;
+      --white:      #ffffff;
+      --cyan:       #00E5FF;
+      --cyan-05:    rgba(0,229,255,0.05);
+      --cyan-10:    rgba(0,229,255,0.10);
+      --cyan-20:    rgba(0,229,255,0.20);
+      --cyan-35:    rgba(0,229,255,0.35);
+      --amber:      #c88040;
+      --amber-20:   rgba(200,128,64,0.20);
+      --amber-18:   rgba(200,128,64,0.18);
+      --amber-05:   rgba(200,128,64,0.05);
+      --green:      #4ec94e;
+      --green-20:   rgba(78,201,78,0.20);
+      --green-05:   rgba(78,201,78,0.05);
+      --dim:        #6c6c6c;
+      --red:        #ff5f57;
+      --yellow:     #febc2e;
+      --dot-green:  #28c840;
 
-      --sans:  'Inter', system-ui, -apple-system, sans-serif;
-      --mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      --sans:   'Inter', system-ui, -apple-system, sans-serif;
+      --mono:   'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
-      --radius:    6px;
-      --ease:      180ms ease;
-      --ease-out:  220ms ease-out;
+      --fs-terminal: 12.5px;
+
+      --radius:   6px;
+      --ease:     180ms ease;
+      --ease-out: 220ms ease-out;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        BASE RESET
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -71,7 +128,14 @@
 
     html {
       color-scheme: dark;
+      scroll-behavior: smooth;
     }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar             { width: 5px; }
+    ::-webkit-scrollbar-track       { background: var(--bg); }
+    ::-webkit-scrollbar-thumb       { background: var(--border-mid); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
     body {
       background: var(--bg);
@@ -84,16 +148,30 @@
       flex-direction: column;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a { color: inherit; text-decoration: none; }
+
+    /* ═══════════════════════════════════════════════════
+       AMBIENT BACKGROUND — dot grid + radial glow + scanlines
+    ═══════════════════════════════════════════════════ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px),
+        radial-gradient(ellipse 110% 45% at 50% -5%, rgba(0,229,255,0.055) 0%, transparent 65%),
+        radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 36px 36px;
+      pointer-events: none;
+      z-index: 0;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        KEYFRAMES
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -109,43 +187,158 @@
       50%      { opacity: 0.28; }
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       ANIMATION UTILITY CLASSES
-    ═══════════════════════════════════════════════════════════════ */
+    @keyframes bootFadeOut {
+      0%  { opacity: 1; }
+      100%{ opacity: 0; }
+    }
+
+    @keyframes scanDown {
+      0%   { transform: translateY(-100%); opacity: 1; }
+      100% { transform: translateY(200%);  opacity: 0.3; }
+    }
+
+    @keyframes progressIn {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       ANIMATION UTILITIES
+       Delays are offset past the boot overlay.
+       Formula: (BOOT.firstDelay + lines.length × BOOT.lineInterval + BOOT.fadePad) / 1000
+       With current constants (80 + 7×175 + 340 = 1645ms total), overlay fades
+       out at ~1.645s and is removed at ~2.145s.
+       If you add/remove boot lines or change BOOT timing, update these values.
+    ═══════════════════════════════════════════════════ */
     .anim {
       opacity: 0;
       animation: fadeUp 0.42s ease-out forwards;
-      will-change: opacity, transform;
+      /* will-change is set/cleaned-up by JS (see script) to avoid permanent
+         compositor layer promotion after animations finish */
     }
-    .d1 { animation-delay: 0.04s; }
-    .d2 { animation-delay: 0.14s; }
-    .d3 { animation-delay: 0.24s; }
-    .d4 { animation-delay: 0.34s; }
-    .d5 { animation-delay: 0.46s; }
-    .d6 { animation-delay: 0.58s; }
-    .d7 { animation-delay: 0.70s; }
+
+    .d1 { animation-delay: 2.05s; }
+    .d2 { animation-delay: 2.15s; }
+    .d3 { animation-delay: 2.25s; }
+    .d4 { animation-delay: 2.35s; }
+    .d5 { animation-delay: 2.47s; }
+    .d6 { animation-delay: 2.60s; }
+    .d7 { animation-delay: 2.73s; }
+    .d8 { animation-delay: 2.86s; }
 
     @media (prefers-reduced-motion: reduce) {
       .anim { opacity: 1; animation: none; }
       .cursor, .live-dot { animation: none !important; }
+      #boot-overlay { display: none !important; }
+      /* Suppress hover-triggered scan beam and progress fill for reduced-motion users */
+      .status-card:hover .scan-beam { animation: none; }
+      .progress-fill { animation: none; width: var(--pct, 0%); transform: scaleX(1); }
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
+       BOOT OVERLAY — THE SIGNATURE MOMENT
+    ═══════════════════════════════════════════════════ */
+    #boot-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 24px;
+    }
+
+    #boot-overlay.fading {
+      animation: bootFadeOut 0.5s ease-out forwards;
+      pointer-events: none;
+    }
+
+    .boot-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .boot-header {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .boot-log {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .boot-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: var(--fs-terminal);
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .boot-line.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .boot-ts  { color: var(--border-mid); min-width: 60px; flex-shrink: 0; font-size: 11px; }
+    .boot-msg { color: var(--ash); flex: 1; }
+
+    .boot-status {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+      padding: 2px 7px;
+      border-radius: 2px;
+    }
+
+    .boot-status.ok   { color: var(--cyan);  border: 1px solid var(--cyan-20);   background: var(--cyan-05);  }
+    .boot-status.pend { color: var(--amber); border: 1px solid var(--amber-20); background: var(--amber-05); }
+    .boot-status.nom  { color: var(--green); border: 1px solid var(--green-20); background: var(--green-05); }
+
+    .boot-tagline {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--cyan);
+      margin-top: 28px;
+      opacity: 0;
+      letter-spacing: 0.04em;
+      transition: opacity 0.3s ease;
+    }
+
+    .boot-tagline.visible { opacity: 1; }
+
+    /* ═══════════════════════════════════════════════════
        LAYOUT
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .wrap {
       max-width: 680px;
       margin: 0 auto;
       padding: 0 24px;
+      position: relative;
+      z-index: 1;
     }
 
     main { flex: 1; }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        NAV STRIP
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .site-nav {
       border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 2;
     }
 
     .nav-inner {
@@ -153,6 +346,12 @@
       align-items: center;
       justify-content: space-between;
       padding: 22px 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
     }
 
     .nav-prompt {
@@ -163,11 +362,7 @@
       align-items: center;
     }
 
-    .nav-tilde {
-      color: var(--cyan);
-      margin-right: 6px;
-      user-select: none;
-    }
+    .nav-tilde  { color: var(--cyan); margin-right: 6px; user-select: none; }
 
     .cursor {
       display: inline-block;
@@ -177,6 +372,14 @@
       margin-left: 2px;
       vertical-align: text-bottom;
       animation: blink 1.1s step-end infinite;
+    }
+
+    .nav-clock {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      user-select: none;
     }
 
     .nav-badge {
@@ -192,11 +395,24 @@
       user-select: none;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        HERO
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .hero {
       padding: 76px 0 60px;
+      position: relative;
+    }
+
+    /* Localized glow behind the headline */
+    .hero::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 55px;
+      width: 300px;
+      height: 180px;
+      background: radial-gradient(ellipse, rgba(0,229,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .hero-eyebrow {
@@ -205,7 +421,7 @@
       color: var(--cyan);
       letter-spacing: 0.06em;
       margin-bottom: 24px;
-      user-select: none;
+      min-height: 1.6em;
     }
 
     .hero-h1 {
@@ -220,6 +436,7 @@
     .hero-h1 em {
       font-style: normal;
       color: var(--cyan);
+      text-shadow: 0 0 28px rgba(0,229,255,0.22), 0 0 60px rgba(0,229,255,0.08);
     }
 
     .hero-sub {
@@ -230,9 +447,9 @@
       line-height: 1.72;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        SECTION LABEL
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .slabel {
       font-family: var(--mono);
       font-size: 11px;
@@ -242,18 +459,18 @@
       user-select: none;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        RULE DIVIDERS
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .rule {
       border: none;
       border-top: 1px solid var(--border);
       margin: 52px 0;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       IDENTITY / DOMAIN SECTION
-    ═══════════════════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════════
+       IDENTITY
+    ═══════════════════════════════════════════════════ */
     .identity-row {
       display: flex;
       align-items: baseline;
@@ -275,33 +492,49 @@
       font-style: italic;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       STATUS PANEL  ← signature element
-    ═══════════════════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════════
+       STATUS PANEL — signature element (enhanced)
+    ═══════════════════════════════════════════════════ */
     .status-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
+      position: relative;
     }
 
-    /* The single cyan accent line — contained, not broad glow */
+    /* Top accent gradient line */
     .status-card::before {
       content: '';
       display: block;
       height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--cyan) 30%,
-        var(--cyan) 70%,
-        transparent 100%
-      );
-      opacity: 0.45;
+      background: linear-gradient(90deg, transparent 0%, var(--cyan) 30%, var(--cyan) 70%, transparent 100%);
+      opacity: 0.55;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Scan beam — slides on hover */
+    .scan-beam {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      transform: translateY(-100%);
+      background: linear-gradient(180deg, transparent 0%, var(--cyan-05) 50%, transparent 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .status-card:hover .scan-beam {
+      animation: scanDown 0.85s ease-in-out forwards;
     }
 
     .status-body {
       padding: 20px 22px;
+      position: relative;
+      z-index: 2;
     }
 
     .status-head {
@@ -351,48 +584,60 @@
     .sr-key {
       font-family: var(--mono);
       font-size: 13px;
-      color: #6c6c6c;
+      color: var(--dim);
       min-width: 88px;
       flex-shrink: 0;
     }
 
-    /* CSS dot-dashed separator — adapts to any width */
     .sr-line {
       flex: 1;
       height: 1px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--border-mid) 0,
-        var(--border-mid) 3px,
-        transparent 3px,
-        transparent 9px
-      );
+      background: repeating-linear-gradient(90deg, var(--border-mid) 0, var(--border-mid) 3px, transparent 3px, transparent 9px);
     }
 
     .sr-val {
       font-family: var(--mono);
       font-size: 13px;
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
     }
 
-    .sr-val.live    { color: var(--cyan); }
-    .sr-val.active  { color: var(--cyan); }
-    .sr-val.wip     { color: var(--amber); }
-    .sr-val.dim     { color: var(--ash); }
+    .sr-val.live, .sr-val.active { color: var(--cyan); }
+    .sr-val.wip    { color: var(--amber); }
+    .sr-val.dim    { color: var(--ash); }
+    .sr-val.nom    { color: var(--green); }
 
-    /* ═══════════════════════════════════════════════════════════════
+    .progress-bar {
+      display: inline-block;
+      width: 52px;
+      height: 4px;
+      background: var(--amber-18);
+      border-radius: 2px;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+
+    .progress-fill {
+      display: block;
+      height: 100%;
+      width: var(--pct, 0%);
+      background: var(--amber);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      --pct: 0%; /* neutral fallback — JS sets the real value via PORTFOLIO_PCT (single source of truth) */
+      animation: progressIn 1.6s 2.9s ease-out forwards;
+    }
+
+    /* ═══════════════════════════════════════════════════
        CONTACT CARDS
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-    }
-
-    @media (max-width: 480px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     .c-card {
@@ -403,9 +648,23 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      transition:
-        border-color var(--ease),
-        transform    var(--ease-out);
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--ease), transform var(--ease-out), background var(--ease);
+    }
+
+    /* Left-edge accent bar on hover */
+    .c-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--cyan), transparent);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.24s ease-out;
     }
 
     .c-card:hover {
@@ -413,6 +672,8 @@
       background: var(--cyan-10);
       transform: translateY(-2px);
     }
+
+    .c-card:hover::before { transform: scaleY(1); }
 
     .c-card:focus-visible {
       outline: 2px solid var(--cyan);
@@ -428,15 +689,9 @@
       transition: color var(--ease);
     }
 
-    .c-card:hover .c-icon {
-      color: var(--cyan);
-    }
+    .c-card:hover .c-icon { color: var(--cyan); }
 
-    .c-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
+    .c-meta  { display: flex; flex-direction: column; gap: 3px; }
 
     .c-type {
       font-family: var(--mono);
@@ -453,31 +708,29 @@
       transition: color var(--ease);
     }
 
-    .c-card:hover .c-label {
-      color: var(--white);
-    }
+    .c-card:hover .c-label { color: var(--white); }
 
-    /* ═══════════════════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════════
        UPCOMING TAGS
-    ═══════════════════════════════════════════════════════════════ */
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    ═══════════════════════════════════════════════════ */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .tag {
       font-family: var(--mono);
       font-size: 12px;
-      color: var(--text);
+      color: var(--ash);
       border: 1px solid var(--border-mid);
       border-radius: 3px;
       padding: 5px 12px;
       cursor: default;
       user-select: none;
-      transition:
-        border-color var(--ease),
-        color        var(--ease);
+      transition: border-color var(--ease), color var(--ease), background var(--ease);
+    }
+
+    .tag::before {
+      content: '> ';
+      color: var(--border-mid);
+      transition: color var(--ease);
     }
 
     .tag:hover {
@@ -486,13 +739,102 @@
       background: var(--cyan-10);
     }
 
-    /* ═══════════════════════════════════════════════════════════════
+    .tag:hover::before { color: var(--cyan); }
+
+    /* ═══════════════════════════════════════════════════
+       MINI TERMINAL
+    ═══════════════════════════════════════════════════ */
+    .mini-terminal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 15px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.015);
+    }
+
+    .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .t-dot.r { background: var(--red); }
+    .t-dot.y { background: var(--yellow); }
+    .t-dot.g { background: var(--dot-green); }
+
+    .t-bar-title {
+      flex: 1;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      user-select: none;
+    }
+
+    .terminal-output {
+      padding: 15px 18px;
+      font-family: var(--mono);
+      font-size: var(--fs-terminal);
+      line-height: 1.95;
+      max-height: 230px;
+      min-height: 52px;
+      overflow-y: auto;
+    }
+
+    .terminal-output::-webkit-scrollbar       { width: 3px; }
+    .terminal-output::-webkit-scrollbar-thumb { background: var(--border-mid); }
+    .terminal-output:focus-visible            { outline: 1px solid var(--border-mid); outline-offset: -1px; }
+
+    .t-line { display: flex; gap: 9px; align-items: baseline; }
+
+    .t-prompt     { color: var(--cyan); flex-shrink: 0; }
+    .t-prompt.sys { color: var(--muted); }
+
+    .t-text       { color: var(--ash); }
+    .t-text.cmd   { color: var(--text); }
+    .t-text.hi    { color: var(--cyan); }
+    .t-text.warn  { color: var(--amber); }
+    .t-text.ok    { color: var(--green); }
+    .t-text.err   { color: var(--red); }
+
+    .terminal-input-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .terminal-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--mono);
+      font-size: var(--fs-terminal);
+      color: var(--text);
+      flex: 1;
+      caret-color: var(--cyan);
+    }
+
+    .terminal-input::placeholder { color: var(--muted); }
+
+    .terminal-input:focus-visible {
+      outline: 1px solid var(--border-mid);
+      outline-offset: -1px;
+    }
+
+    /* ═══════════════════════════════════════════════════
        FOOTER
-    ═══════════════════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════════ */
     .site-footer {
       border-top: 1px solid var(--border);
       margin-top: 80px;
-      padding: 24px 0;
+      padding: 22px 0 20px;
+      position: relative;
+      z-index: 1;
     }
 
     .footer-inner {
@@ -503,94 +845,122 @@
       gap: 8px;
     }
 
-    .f-domain {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
+    .f-domain { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .f-note   { font-size: 12px; color: var(--muted); font-style: italic; }
+
+    .footer-meta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 11px;
+      border-top: 1px solid var(--border);
     }
 
-    .f-note {
-      font-size: 12px;
-      color: var(--muted);
-      font-style: italic;
+    .fm {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--border-mid);
+      letter-spacing: 0.04em;
+    }
+
+    .fm span { color: var(--muted); }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-meta  { gap: 12px; }
+    }
+
+    @media (max-width: 380px) {
+      .nav-clock { display: none; }
     }
   </style>
+
+  <noscript>
+    <style>#boot-overlay { display: none !important; }</style>
+  </noscript>
 </head>
 
 <body>
 
-  <!-- ════════════════════════════════ NAV ════════════════════════════════ -->
-  <header class="site-nav" role="banner">
-    <div class="wrap">
-      <nav class="nav-inner" aria-label="Site header">
+  <!-- ══════════════ BOOT OVERLAY ══════════════ -->
+  <div id="boot-overlay" aria-hidden="true">
+    <div class="boot-wrap">
+      <div class="boot-header">sidakpreet-os — initializing</div>
+      <div class="boot-log" id="boot-log"></div>
+      <div class="boot-tagline" id="boot-tagline">entering environment...</div>
+    </div>
+  </div>
 
-        <div class="nav-prompt" aria-label="Current domain: sidakpreetsingh.com">
-          <span class="nav-tilde" aria-hidden="true">~</span>
-          <!-- ✏️ EDIT — nav domain -->
-          <span>sidakpreetsingh.com</span>
-          <span class="cursor" aria-hidden="true"></span>
+
+  <!-- ══════════════════ NAV ═══════════════════ -->
+  <header class="site-nav">
+    <div class="wrap">
+      <div class="nav-inner">
+
+        <div class="nav-left">
+          <div class="nav-prompt" aria-label="sidakpreetsingh.com">
+            <span class="nav-tilde" aria-hidden="true">~</span>
+            <span>sidakpreetsingh.com</span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
+          <span class="nav-clock" id="nav-clock" aria-label="Current time"></span>
         </div>
 
         <span class="nav-badge" aria-label="Status: Live">[ LIVE ]</span>
 
-      </nav>
+      </div>
     </div>
   </header>
 
 
-  <!-- ════════════════════════════════ MAIN ═══════════════════════════════ -->
+  <!-- ══════════════════ MAIN ══════════════════ -->
   <main>
     <div class="wrap">
 
-      <!-- ── HERO ──────────────────────────────────────────────────────── -->
+      <!-- HERO -->
       <section class="hero" aria-labelledby="hero-heading">
+        <p class="hero-eyebrow anim d1" id="hero-eyebrow" aria-hidden="true"></p>
 
-        <p class="hero-eyebrow anim d1" aria-hidden="true">// portfolio.incoming</p>
-
-        <!-- ✏️ EDIT — main headline -->
         <h1 id="hero-heading" class="hero-h1 anim d2">
           Building the things<br>I <em>wish existed.</em>
         </h1>
 
-        <!-- ✏️ EDIT — one-line subheading -->
         <p class="hero-sub anim d3">
           Product professional, builder and automation enthusiast;
           currently designing what comes next.
         </p>
-
       </section>
 
 
-      <!-- ── IDENTITY / DOMAIN ──────────────────────────────────────────── -->
+      <!-- IDENTITY -->
       <section class="anim d3" aria-label="Digital identity">
-
         <p class="slabel">// identity</p>
-
         <div class="identity-row">
-          <!-- ✏️ EDIT — your domain -->
           <span class="identity-domain">sidakpreetsingh.com</span>
           <span class="identity-note">You found it early.</span>
         </div>
-
       </section>
 
 
       <hr class="rule anim d4" aria-hidden="true" />
 
 
-      <!-- ── STATUS PANEL ───────────────────────────────────────────────── -->
+      <!-- STATUS PANEL -->
       <section class="anim d4" aria-label="System status">
-
         <p class="slabel">// system.status</p>
 
-        <div class="status-card" role="status" aria-live="polite">
+        <div class="status-card" role="status" aria-atomic="false">
+          <div class="scan-beam" aria-hidden="true"></div>
           <div class="status-body">
 
             <div class="status-head">
               <div class="live-dot" aria-hidden="true"></div>
               <span class="status-head-label">SYSTEM ONLINE</span>
-              <!-- ✏️ EDIT — bump version when you update the page -->
-              <span class="status-ver">v1.1.0</span>
+              <span class="status-ver">v1.2.0</span>
             </div>
 
             <div class="status-rows">
@@ -598,7 +968,10 @@
               <div class="sr">
                 <span class="sr-key">portfolio</span>
                 <span class="sr-line" aria-hidden="true"></span>
-                <span class="sr-val wip">in progress</span>
+                <span class="sr-val wip">
+                  <span class="progress-bar" aria-hidden="true"><span class="progress-fill"></span></span>
+                  in progress
+                </span>
               </div>
 
               <div class="sr">
@@ -614,37 +987,37 @@
               </div>
 
               <div class="sr">
+                <span class="sr-key">uptime</span>
+                <span class="sr-line" aria-hidden="true"></span>
+                <span class="sr-val nom" id="uptime" aria-live="off">--:--:--</span>
+              </div>
+
+              <div class="sr">
                 <span class="sr-key">eta</span>
                 <span class="sr-line" aria-hidden="true"></span>
                 <span class="sr-val dim">soon™</span>
               </div>
 
-              <!-- ✏️ ADD MORE STATUS ROWS HERE — copy a .sr block above -->
-
             </div>
           </div>
         </div>
-
       </section>
 
 
       <hr class="rule anim d5" aria-hidden="true" />
 
 
-      <!-- ── CONTACT ────────────────────────────────────────────────────── -->
+      <!-- CONTACT -->
       <section class="anim d5" aria-label="Contact">
-
         <p class="slabel">// reach.me</p>
 
         <div class="contact-grid">
 
-          <!-- ✏️ EDIT — replace EMAIL_URL with mailto:your@email.com -->
           <a href="mailto:hello@sidakpreetsingh.com" class="c-card" aria-label="Send an email">
             <svg class="c-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor"
-                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                 aria-hidden="true">
-              <rect x="2.5" y="4.5" width="15" height="12" rx="1.5" />
-              <polyline points="2.5,6.5 10,12 17.5,6.5" />
+                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="15" height="12" rx="1.5"/>
+              <polyline points="2.5,6.5 10,12 17.5,6.5"/>
             </svg>
             <div class="c-meta">
               <span class="c-type">email</span>
@@ -652,10 +1025,8 @@
             </div>
           </a>
 
-          <!-- ✏️ EDIT — replace GITHUB_URL with https://github.com/yourhandle -->
           <a href="https://github.com/ItsMonarch04" class="c-card"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="GitHub profile">
+             target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
             <svg class="c-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path d="M10 .5C4.753.5.5 4.753.5 10c0 4.2 2.724 7.76 6.5 9.018.475.088.65-.207.65-.459
                        0-.226-.008-.824-.013-1.616-2.643.574-3.2-1.274-3.2-1.274-.432-1.098-1.055-1.39-1.055-1.39
@@ -673,10 +1044,8 @@
             </div>
           </a>
 
-          <!-- ✏️ EDIT — replace LINKEDIN_URL with https://linkedin.com/in/yourhandle -->
           <a href="https://linkedin.com/in/sidakpreetsinghk" class="c-card"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="LinkedIn profile">
+             target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
             <svg class="c-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601
                        2.207v4.248H8.015v-8.59h2.558v1.174h.037c.355-.674 1.226-1.387 2.526-1.387
@@ -698,40 +1067,315 @@
       <hr class="rule anim d6" aria-hidden="true" />
 
 
-      <!-- ── UPCOMING ────────────────────────────────────────────────────── -->
+      <!-- UPCOMING -->
       <section class="anim d7" aria-label="Upcoming">
-
         <p class="slabel">// coming.next</p>
-
         <div class="tags" role="list">
-          <!-- ✏️ EDIT — add or remove tags freely -->
           <span class="tag" role="listitem">portfolio</span>
           <span class="tag" role="listitem">blog</span>
           <span class="tag" role="listitem">automations</span>
-          <span class="tag" role="listitem">ai projects</span>
+          <span class="tag" role="listitem">projects</span>
         </div>
-
       </section>
 
-    </div><!-- /wrap -->
+
+      <hr class="rule anim d7" aria-hidden="true" />
+
+
+      <!-- MINI TERMINAL -->
+      <section class="anim d8" aria-label="Interactive console">
+        <p class="slabel">// exec.console</p>
+
+        <div class="mini-terminal" role="region" aria-label="Interactive terminal. Type help for commands.">
+          <div class="terminal-bar" aria-hidden="true">
+            <span class="t-dot r"></span>
+            <span class="t-dot y"></span>
+            <span class="t-dot g"></span>
+            <span class="t-bar-title">sidakpreet@terminal — bash</span>
+          </div>
+          <div class="terminal-output" id="t-out" role="log" tabindex="0"></div>
+          <div class="terminal-input-row">
+            <span class="t-prompt" aria-hidden="true">$</span>
+            <input type="text" class="terminal-input" id="t-in"
+                   placeholder="type 'help'"
+                   autocomplete="off" spellcheck="false"
+                   autocorrect="off" autocapitalize="none"
+                   aria-label="Terminal command input" />
+          </div>
+        </div>
+      </section>
+
+    </div>
   </main>
 
 
-  <!-- ════════════════════════════════ FOOTER ═════════════════════════════ -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- ══════════════════ FOOTER ════════════════ -->
+  <footer class="site-footer">
     <div class="wrap">
       <div class="footer-inner">
-        <!-- ✏️ EDIT — footer name -->
-        <span class="f-domain">© <span id="yr">2024</span> Sidakpreet Singh</span>
+        <span class="f-domain">© <span id="yr"></span> Sidakpreet Singh</span>
         <span class="f-note">Built with curiosity and AI.</span>
+        <div class="footer-meta" aria-hidden="true">
+          <span class="fm">node: <span>edge-01</span></span>
+          <span class="fm">session: <span id="sid"></span></span>
+          <span class="fm">render: <span id="rtt"></span>ms</span>
+          <span class="fm">loc: <span>IN</span></span>
+        </div>
       </div>
     </div>
   </footer>
 
 
   <script>
-    // Auto-set year — never needs updating manually
+    /* ─── REDUCED MOTION GUARD ───── */
+    const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+
+    const PORTFOLIO_PCT = 69;
+    const _progressFill = document.querySelector('.progress-fill');
+    if (_progressFill) _progressFill.style.setProperty('--pct', PORTFOLIO_PCT + '%');
+
+    if (!noMotion) {
+      document.querySelectorAll('.anim').forEach(el => {
+        el.style.willChange = 'opacity, transform';
+        el.addEventListener('animationend', () => {
+          el.style.willChange = 'auto';
+        }, { once: true });
+      });
+
+      setTimeout(() => {
+        document.querySelectorAll('.anim').forEach(el => {
+          el.style.willChange = 'auto';
+        });
+      }, 3600);
+    }
+
+    /* Shared timing reference: set by the boot IIFE, read by the typewriter IIFE.
+       Using script scope instead of window to keep the contract explicit and
+       avoid polluting the global object. */
+    let _bootDoneAt = 0;
+
+    /* ─── BOOT SEQUENCE ─────────────────────────────────────────── */
+    (function () {
+      const overlay = document.getElementById('boot-overlay');
+      const log     = document.getElementById('boot-log');
+      const tagline = document.getElementById('boot-tagline');
+
+      if (noMotion) { overlay.remove(); return; }
+
+      /* Named constants — change timing in one place only */
+      const BOOT = { firstDelay: 80, lineInterval: 175, taglinePad: 60, fadePad: 340 };
+
+      const lines = [
+        { ts: '100ms',  msg: 'BIOS v1.2.0 — POST check',             st: 'OK',      cls: 'ok'   },
+        { ts: '200ms',  msg: 'Mounting filesystem',                  st: 'OK',      cls: 'ok'   },
+        { ts: '300ms',  msg: 'Identity kernel loaded',               st: 'OK',      cls: 'ok'   },
+        { ts: '400ms',  msg: 'DNS resolved → sidakpreetsingh.com',   st: 'OK',      cls: 'ok'   },
+        { ts: '500ms',  msg: 'Compiling portfolio module',           st: 'PENDING', cls: 'pend' },
+        { ts: '600ms',  msg: 'sys.load check',                       st: 'NOMINAL', cls: 'nom'  },
+        { ts: '700ms',  msg: 'All systems go',                       st: 'OK',      cls: 'ok'   },
+      ];
+
+      /* Expose computed total for the typewriter IIFE below */
+      const doneAt = BOOT.firstDelay + lines.length * BOOT.lineInterval;
+      _bootDoneAt = doneAt + BOOT.fadePad;
+
+      lines.forEach(l => {
+        const el = document.createElement('div');
+        el.className = 'boot-line';
+        el.innerHTML =
+          `<span class="boot-ts">[${l.ts.padStart(5)}]</span>` +
+          `<span class="boot-msg">${l.msg}</span>` +
+          `<span class="boot-status ${l.cls}">[ ${l.st} ]</span>`;
+        log.appendChild(el);
+      });
+
+      const bootEls = log.querySelectorAll('.boot-line');
+
+      bootEls.forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), BOOT.firstDelay + i * BOOT.lineInterval);
+      });
+
+      setTimeout(() => tagline.classList.add('visible'), doneAt + BOOT.taglinePad);
+
+      setTimeout(() => {
+        overlay.classList.add('fading');
+        /* Belt-and-suspenders: remove overlay even if animationend never fires
+           (GPU suppression, OS power-saving, browser quirk). Guard is 100ms
+           longer than the 500ms bootFadeOut animation. */
+        const guard = setTimeout(() => overlay.remove(), 600);
+        overlay.addEventListener('animationend', () => {
+          clearTimeout(guard);
+          overlay.remove();
+        }, { once: true });
+      }, doneAt + BOOT.fadePad);
+    })();
+
+    /* ─── SHARED PAD HELPER ─────────────────────────────────────── */
+    const pad2 = v => String(v).padStart(2, '0');
+
+    /* ─── REAL-TIME CLOCK + UPTIME (single merged timer) ────────── */
+    /* One shared interval guarantees clock and uptime always derive
+       from the same timestamp, preventing independent drift. */
+    const clockEl  = document.getElementById('nav-clock');
+    const uptimeEl = document.getElementById('uptime');
+
+    function tickAll() {
+      const n   = new Date();
+      /* Clock */
+      if (clockEl) {
+        clockEl.textContent = `${pad2(n.getHours())}:${pad2(n.getMinutes())}:${pad2(n.getSeconds())}`;
+      }
+      /* Uptime (HH:MM:SS since midnight) */
+      if (uptimeEl) {
+        const mid = new Date(n);
+        mid.setHours(0, 0, 0, 0);
+        const d = Math.floor((n - mid) / 1000);
+        uptimeEl.textContent =
+          `${pad2(Math.floor(d / 3600))}:${pad2(Math.floor((d % 3600) / 60))}:${pad2(d % 60)}`;
+      }
+    }
+    tickAll();
+    setInterval(tickAll, 1000);
+
+    /* ─── HERO EYEBROW TYPEWRITER ───────────────────────────────── */
+    (function () {
+      const el   = document.getElementById('hero-eyebrow');
+      const text = '// portfolio.incoming';
+
+      if (noMotion) { el.textContent = text; return; }
+
+      let i = 0;
+      function type() {
+        if (i <= text.length) { el.textContent = text.slice(0, i++); setTimeout(type, 38); }
+      }
+      // Start just after boot overlay begins to fade; _bootDoneAt is 0 if noMotion skipped boot
+      const startAt = _bootDoneAt + 100;
+      setTimeout(type, startAt);
+    })();
+
+    /* ─── MINI TERMINAL ─────────────────────────────────────────── */
+    (function () {
+      const out   = document.getElementById('t-out');
+      const input = document.getElementById('t-in');
+      const hist  = [];
+      let   hIdx  = -1;
+
+      const CMDS = {
+        help: [
+          { t: 'Available commands:', c: 'hi' },
+          { t: '  who      →  about me', c: '' },
+          { t: '  status   →  system report', c: '' },
+          { t: '  eta      →  portfolio timeline', c: '' },
+          { t: '  hire     →  work with me', c: '' },
+          { t: '  ping     →  connection test', c: '' },
+          { t: '  clear    →  reset terminal', c: '' },
+        ],
+        who: [
+          { t: 'Sidakpreet Singh — Strategy & GTM professional.', c: 'hi' },
+          { t: 'IIM Indore MBA · HCLSoftware · ex-Bain (summer associate)', c: '' },
+          { t: 'Bridges product development and commercial execution.', c: '' },
+          { t: "Also builds things that didn't exist before.", c: '' },
+        ],
+        status: [
+          { t: 'system.status → all green', c: 'hi' },
+          { t: '  domain      live ✓', c: 'ok' },
+          { t: '  email       active ✓', c: 'ok' },
+          { t: `  portfolio   ~${PORTFOLIO_PCT}% compiled`, c: 'warn' },
+          { t: '  ambition    unbounded', c: 'ok' },
+        ],
+        eta: [
+          { t: 'portfolio ETA: soon™', c: 'warn' },
+          { t: '(this response is not legally binding)', c: '' },
+          { t: 'conservative estimate: the near future.', c: '' },
+        ],
+        hire: [
+          { t: 'Initiating hire sequence...', c: 'hi' },
+          { t: '  email  -   hello@sidakpreetsingh.com', c: 'ok' },
+          { t: '  linkedin  -  linkedin.com/in/sidakpreetsinghk', c: 'ok' },
+          { t: 'Note: serious enquiries only. Coffee optional.', c: '' },
+        ],
+        ping: [
+          { t: 'PING sidakpreetsingh.com: 32 bytes of data', c: '' },
+          { t: '64 bytes from edge-01: seq=0 ttl=69 time=0.69ms', c: 'ok' },
+          { t: 'pong. ✓', c: 'hi' },
+        ],
+      };
+
+      function esc(s) {
+        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+
+      function scroll() { out.scrollTop = out.scrollHeight; }
+
+      function sys(text) {
+        const d = document.createElement('div');
+        d.className = 't-line';
+        d.innerHTML = `<span class="t-prompt sys">#</span><span class="t-text">${esc(text)}</span>`;
+        out.appendChild(d);
+        scroll();
+      }
+
+      function addInput(cmd) {
+        const d = document.createElement('div');
+        d.className = 't-line';
+        d.innerHTML = `<span class="t-prompt">$</span><span class="t-text cmd">${esc(cmd)}</span>`;
+        out.appendChild(d);
+      }
+
+      function addLines(lines) {
+        while (out.children.length > 150) out.removeChild(out.firstChild);
+        lines.forEach(l => {
+          const d = document.createElement('div');
+          d.className = 't-line';
+          d.innerHTML =
+            `<span class="t-prompt" style="visibility:hidden">$</span>` +
+            `<span class="t-text ${l.c}">${esc(l.t)}</span>`;
+          out.appendChild(d);
+        });
+        scroll();
+      }
+
+      sys("type 'help' for available commands.");
+
+      input.addEventListener('keydown', e => {
+        const hasModifier = e.ctrlKey || e.metaKey || e.altKey;
+        if (e.key === 'ArrowUp' && !hasModifier) {
+          if (hIdx < hist.length - 1) input.value = hist[hist.length - 1 - ++hIdx];
+          e.preventDefault();
+        } else if (e.key === 'ArrowDown' && !hasModifier) {
+          if (hIdx > 0) input.value = hist[hist.length - 1 - --hIdx];
+          else { hIdx = -1; input.value = ''; }
+          e.preventDefault();
+        } else {
+          if (e.key !== 'Shift' && e.key !== 'Control' && e.key !== 'Meta' && e.key !== 'Alt') {
+            hIdx = -1;
+          }
+          if (e.key === 'Enter') {
+            const cmd = input.value.trim().replace(/\s+/g, ' ');
+            input.value = '';
+            if (!cmd) return;
+            hist.push(cmd);
+            if (hist.length > 50) hist.shift(); /* cap — mirrors DOM line limit */
+            addInput(cmd);
+            const key = cmd.toLowerCase();
+            if (key === 'clear') { out.innerHTML = ''; sys('terminal cleared.'); return; }
+            if (CMDS[key]) { addLines(CMDS[key]); }
+            else { addLines([{ t: `command not found: ${cmd}. try 'help'`, c: 'err' }]); }
+          }
+        }
+      });
+    })();
+
+    /* ─── FOOTER META ────────────────────────────────────────────── */
     document.getElementById('yr').textContent = new Date().getFullYear();
+    document.getElementById('sid').textContent =
+      Math.random().toString(36).slice(2, 8).padEnd(6, '0').toUpperCase();
+
+    window.addEventListener('load', () => {
+      const rtt = Math.round(performance.now());
+      document.getElementById('rtt').textContent = rtt;
+    });
   </script>
 
 </body>

@@ -18,8 +18,7 @@ The long-term goal is to replace this landing page with a full portfolio website
 
 * HTML
 * CSS (embedded)
-* Vanilla JavaScript (if required)
-* Hosted on Vercel
+* Vanilla JavaScript
 * DNS managed through Cloudflare
 * Domain registered through Porkbun
 

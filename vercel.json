@@ -1,0 +1,39 @@
+{
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://discord.com/users/669947165946413076",
+      "permanent": true
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/in/sidakpreetsinghk",
+      "permanent": true
+    },
+    {
+      "source": "/spotify",
+      "destination": "https://open.spotify.com/user/31fefqcyffm4e7gmwj6iahnqwo4q",
+      "permanent": true
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/impreetentious",
+      "permanent": true
+    },
+    {
+      "source": "/reddit",
+      "destination": "https://www.reddit.com/user/ItsMonarch04/",
+      "permanent": true
+    },
+    {
+      "source": "/x",
+      "destination": "https://x.com/impreetentious",
+      "permanent": true
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://www.instagram.com/impreetentious/",
+      "permanent": true
+    }
+  ]
+}
